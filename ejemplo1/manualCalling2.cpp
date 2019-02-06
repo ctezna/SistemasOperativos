@@ -16,7 +16,7 @@ main() {
   
   bzero(buffer, SIZE_BUFFER);
   
-  fd = syscall(__NR_open, "manualCalling.c", O_RDONLY);
+  fd = syscall(__NR_open, "manualCalling.cpp", O_RDONLY);
 
   if (fd == -1) {
     fprintf(stderr, "Error abriendo archivo: %d\n", errno);
