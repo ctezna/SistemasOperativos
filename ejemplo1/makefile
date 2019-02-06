@@ -30,7 +30,7 @@ manualCalling2: manualCalling2.o
 
 manualCalling2.o: manualCalling2.cpp
 
-directCalling2: directCalling.o
+directCalling2: directCalling2.o
 	g++ -o $@ $<
 
 directCalling2.o: directCalling2.cpp
