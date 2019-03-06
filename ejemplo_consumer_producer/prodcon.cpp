@@ -18,8 +18,8 @@ int main(int argc, char *argv[]) {
   int *start = new int;
   *start = 10;
   
-  pthread_create(&thr_con, NULL, productor, (void *) start);
-  pthread_create(&thr_prod, NULL, consumidor, NULL);
+  pthread_create(&thr_prod, NULL, productor, (void *) start);
+  pthread_create(&thr_con, NULL, consumidor, NULL);
 
   pthread_join(thr_con, NULL);
   pthread_join(thr_prod, NULL);

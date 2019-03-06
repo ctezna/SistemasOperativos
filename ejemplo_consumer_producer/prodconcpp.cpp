@@ -14,7 +14,7 @@ int contador;
 
 int main(int argc, char *argv[]) {
   entra = sale = contador = 0;
-  std::thread thr_con(productor, 10), thr_prod(consumidor);
+  std::thread thr_prod(productor, 10), thr_con(consumidor);
 
   thr_con.join();
   thr_prod.join();
