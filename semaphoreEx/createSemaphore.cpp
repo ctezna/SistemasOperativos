@@ -30,6 +30,8 @@ int main(int argc, char *argv[]){
         return EXIT_FAILURE;
     }
 
+    cout << "Created semaphore with <semid>: "
+         << semid << endl;
     return EXIT_SUCCESS;
 }
 
