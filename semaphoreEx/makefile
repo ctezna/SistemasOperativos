@@ -1,4 +1,4 @@
-all: createSemaphore removeSemaphore demonPrinter clientPrinter
+all: createSemaphore removeSemaphore deamonPrinter clientPrinter processHierarchy
 
 createSemaphore: createSemaphore.o
 	$(CXX) -o $@ $^
@@ -6,10 +6,13 @@ createSemaphore: createSemaphore.o
 removeSemaphore: removeSemaphore.o
 	$(CXX) -o $@ $^
 
-demonPrinter: demonPrinter.o
+deamonPrinter: deamonPrinter.o
 	$(CXX) -o $@ $^
 
 clientPrinter: clientPrinter.o
+	$(CXX) -o $@ $^
+
+processHierarchy: processHierarchy.o
 	$(CXX) -o $@ $^
 
 clean: 
@@ -17,7 +20,9 @@ clean:
 	rm -f createSemaphore.o
 	rm -f removeSemaphore
 	rm -f removeSemaphore.o
-	rm -f demonPrinter
-	rm -f demonPrinter.o
+	rm -f deamonPrinter
+	rm -f deamonPrinter.o
 	rm -f clientPrinter
 	rm -f clientPrinter.o
+	rm -f processHierarchy
+	rm -f processHierarchy.o
