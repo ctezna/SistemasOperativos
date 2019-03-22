@@ -1,4 +1,4 @@
 #pragma once
+#define nSem 4
 
-extern const int nSem;
 extern const char *names[];
