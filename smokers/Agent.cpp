@@ -29,6 +29,7 @@ int main (void){
 static void agent(sem_t *semaphores[]) {
     for (;;){
         int val = rand() % 3;
+        cout << "Serving ingredients . . ." << endl;
         sem_post(semaphores[val]);
         sem_wait(semaphores[nSem-1]);
     }
