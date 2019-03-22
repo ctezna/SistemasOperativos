@@ -26,10 +26,10 @@ int main (void){
 }
 
 
-static void agent(sem_t *semaphores) {
+static void agent(sem_t *semaphores[]) {
     for (;;){
         int val = rand() % 3;
         sem_post(semaphores[val]);
-        sem_wait(semaphores[val]);
+        sem_wait(semaphores[nSem-1]);
     }
 }
