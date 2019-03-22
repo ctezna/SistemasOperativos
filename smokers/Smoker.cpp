@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <cerrno>
+#include <unistd.h>
 
 using namespace std;
 
@@ -45,7 +46,7 @@ static void smoker(const char *name, sem_t *wait, sem_t *agent) {
         sem_wait(wait);
         cerr << "Smoker: " << name
              << " smoking" << endl;
-
+        sleep(rand() % 10);
         sem_post(agent);
     }
 }
