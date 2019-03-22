@@ -1,1 +1,3 @@
-const char *names[] = {"noTobacco", "noPaper", "noMatch"};
+const char *names[] = {"noTobacco", "noPaper", "noMatch", "semAgente"};
+
+const int nSem = 4;
