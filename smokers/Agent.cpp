@@ -13,9 +13,9 @@ static void agent(sem_t *[]);
 
 int main (void){
     
-    sem_t *semaphores[3];
+    sem_t *semaphores[nSem];
 
-    for(int i = 0; i < 3; ++i){
+    for(int i = 0; i < nSem; ++i){
         semaphores[i] = sem_open(names[i], 0);
     }
     

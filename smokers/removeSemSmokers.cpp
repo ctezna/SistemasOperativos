@@ -11,7 +11,7 @@ using namespace std;
 
 int main (void) {
     
-    for(int i = 0; i < 3; ++i){
+    for(int i = 0; i < nSem; ++i){
         if (sem_unlink(names[i]) == -1){
             cerr << "Error removing semaphore: " << strerror(errno)
             << endl;

@@ -11,9 +11,9 @@ using namespace std;
 
 int main (void) {
     
-    sem_t *semaphores[3];
+    sem_t *semaphores[nSem];
 
-    for (long unsigned i = 0; i < 3; ++i){
+    for (long unsigned i = 0; i < nSem; ++i){
         semaphores[i] = sem_open(names[i],
                         O_CREAT | O_EXCL,
                         S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP, 0);
