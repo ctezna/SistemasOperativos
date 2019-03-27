@@ -1,0 +1,19 @@
+
+
+type limitedGarden = monitor
+    var n: interger;
+    var contador: interger;
+    var lleno: condicion;
+
+    procedure entry entrar()
+    begin
+        while contador = n do
+            lleno.wait();
+        contador++;
+    end
+    procedure entry sale()
+    begin
+        if contador = n then lleno.signal();
+        contador++;
+    end
+end
